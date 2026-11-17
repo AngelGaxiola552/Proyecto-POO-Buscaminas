@@ -24,7 +24,7 @@ public abstract class Casilla {
 	}
 	//Metodo que se usaran como comun en las clases CasillaMina 
 	//CasillaNumero
-	public boolean isReveleda() {
+	public boolean isRevelada() {
 		//retorna si fue revelada la casilla 
 		return revelada;
 	}
@@ -36,6 +36,10 @@ public abstract class Casilla {
 		if(!revelada) {
 			this.marcado=!this.marcado;
 		}
+	}
+	public void revelar() {
+	    this.revelada = true;
+	    this.marcado = false;
 	}
 	//abstractas
 	public abstract boolean esMina();
